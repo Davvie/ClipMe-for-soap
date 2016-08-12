@@ -1,0 +1,33 @@
+{
+    "name": "ClipMe for soap4.me",
+    "version": "1.0.0",
+    "author": "davvie",
+    "description": "Расширение добавляет кнопку копирования прямой ссылки в список серий на soap4.me.",
+    "manifest_version": 2,
+    "permissions": [
+        "clipboardWrite",
+        "tabs",
+        "webNavigation"
+    ],
+    "icons": {
+        "16": "icon-16.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+    "content_scripts": [{
+        "matches": ["https://soap4.me/*",
+            "http://soap4.me/*"
+        ],
+        "js": ["jquery.js",
+            "clipme.js",
+            "md5.js"
+        ],
+        "css": ["clipme.css"]
+    }],
+    "background" : {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "web_accessible_resources": ["clipme.css"]
+}

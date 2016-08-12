@@ -1,0 +1,19 @@
+#episodes .clipme {
+    width: 30px;
+    text-align: center;
+    opacity: .5;
+    height: 26px;
+    padding-top: 2px;
+    font-size: 18px;
+    margin-top: -2px
+}
+
+#episodes .clipme:hover {
+    background: #4d4d4d;
+    color: #fff;
+    opacity: 1
+}
+
+#content {
+    width: 900px!important;
+}
