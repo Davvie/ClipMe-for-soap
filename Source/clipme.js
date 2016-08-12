@@ -18,9 +18,7 @@ function main(window, $, undefined) {
 
     var cssLoc = chrome.extension.getURL("clipme.css");
     $('<link rel="stylesheet" type="text/css" href="' + cssLoc + '" >').appendTo("head");
-
     $('.play.pointer.tip').after('<a id="clipme-copy" href="javascript:void(0);"><div class="clipme">cp</div></a>');
-
     $('#clipme-copy div').on('click', function() {
 
         var selectedItem = $(this).parent().prev('div')
@@ -44,9 +42,7 @@ function main(window, $, undefined) {
                 copyToClipboard(url)
             }
         }, "json")
-
     });
-
 
 }
 
